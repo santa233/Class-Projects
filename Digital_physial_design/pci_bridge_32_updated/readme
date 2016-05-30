@@ -1,0 +1,12 @@
+0. setup PT env
+module load primetime
+
+1. run sizing
+pt_shell -f run_pt.tcl
+
+2. run ECO
+encounter -nowin -init run_eco.tcl
+
+3. timing and power analysis after ECO
+pt_shell -f eva_pt.tcl
+

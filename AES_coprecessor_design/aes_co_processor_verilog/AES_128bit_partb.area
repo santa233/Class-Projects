@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : AES_128bit
+Version: I-2013.12
+Date   : Thu May 14 17:14:16 2015
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    cba_core (File: /software/nonrdist/synopsys-design-compiler-2013.12/libraries/syn/tc6a_cbacore.db)
+
+Number of ports:                          270
+Number of nets:                         10879
+Number of cells:                        10674
+Number of combinational cells:          10149
+Number of sequential cells:               452
+Number of macros/black boxes:              73
+Number of buf/inv:                       1345
+Number of references:                     115
+
+Combinational area:              13544.810142
+Buf/Inv area:                     1249.900017
+Noncombinational area:            1500.419974
+Macro/Black Box area:              178.120004
+Net Interconnect area:          101695.937500
+
+Total cell area:                 15223.350121
+Total area:                     116919.287621
+1

@@ -1,0 +1,62 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : AES_128bit
+Version: I-2013.12
+Date   : Thu May 14 16:30:21 2015
+****************************************
+
+Operating Conditions: nom_pvt   Library: cba_core
+Wire Load Model Mode: top
+
+  Startpoint: state_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: temp03_reg[3]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  AES_128bit         tc6a120m2             cba_core
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  state_reg[0]/CLK (fd1c2)                 0.00       0.00 r
+  state_reg[0]/QN (fd1c2)                  0.96       0.96 r
+  U3094/Y (nand2a0)                        0.45       1.40 f
+  U3166/Y (and2c0)                         0.76       2.16 r
+  U3363/Y (or2c0)                          0.71       2.87 f
+  U3156/Y (nor2a0)                         0.54       3.41 r
+  U3345/Y (or2c0)                          0.49       3.91 f
+  U3334/Y (nand3c1)                        0.58       4.49 f
+  U3140/Y (and2c0)                         0.69       5.18 r
+  U3446/Y (nor2b1)                         1.45       6.63 r
+  U3299/Y (buf1a4)                         1.03       7.66 r
+  U4156/Y (buf1a4)                         0.87       8.53 r
+  U4106/Y (buf1a4)                         0.87       9.40 r
+  U4094/Y (inv1a1)                         0.86      10.27 f
+  U5299/Y (ao7g0)                          0.66      10.92 r
+  U5300/Y (oa4f0)                          0.70      11.63 f
+  U4154/Y (ao1f1)                          0.16      11.79 r
+  temp03_reg[3]/D (fd1a2)                  0.00      11.79 r
+  data arrival time                                  11.79
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  temp03_reg[3]/CLK (fd1a2)                0.00      20.00 r
+  library setup time                      -0.26      19.74
+  data required time                                 19.74
+  -----------------------------------------------------------
+  data required time                                 19.74
+  data arrival time                                 -11.79
+  -----------------------------------------------------------
+  slack (MET)                                         7.95
+
+
+1

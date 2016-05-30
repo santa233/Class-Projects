@@ -1,0 +1,68 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : AES_128bit
+Version: I-2013.12
+Date   : Thu May 14 17:14:17 2015
+****************************************
+
+Operating Conditions: nom_pvt   Library: cba_core
+Wire Load Model Mode: top
+
+  Startpoint: ct13_reg[6]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: ct03_reg[6]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  AES_128bit         tc6a120m2             cba_core
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock clk (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  ct13_reg[6]/CLK (fd1c2)                  0.00       0.00 r
+  ct13_reg[6]/QN (fd1c2)                   1.05       1.05 r
+  U8597/Y (inv1a1)                         0.59       1.64 f
+  U7621/Y (nor2a1)                         0.86       2.50 r
+  U7396/Y (inv1a1)                         0.48       2.98 f
+  U8675/Y (and2c1)                         0.90       3.88 r
+  U8674/Y (inv1a1)                         0.90       4.78 f
+  U6090/Y (or2c0)                          0.48       5.26 r
+  U5652/Y (nor2a0)                         0.55       5.81 f
+  U5619/Y (or2c0)                          0.38       6.20 r
+  U10235/Y (and2c0)                        0.39       6.58 f
+  U12519/Y (oa2i0)                         0.54       7.12 r
+  U4633/Y (ao7g0)                          0.65       7.77 f
+  U4634/Y (and2c0)                         0.39       8.16 r
+  U4635/Y (ao2i0)                          0.50       8.65 f
+  U12520/Y (ao3h0)                         0.30       8.95 r
+  U12532/Y (mx2d0)                         0.48       9.43 f
+  U5137/Y (xnor3a2)                        0.68      10.11 f
+  U12542/Y (mx2d0)                         0.51      10.62 r
+  U12855/Y (mx2d0)                         0.54      11.16 f
+  U10233/Y (and2c0)                        0.59      11.75 r
+  U12929/Y (mx2d0)                         0.42      12.17 f
+  U12930/Y (ao1d1)                         0.14      12.31 r
+  ct03_reg[6]/D (fd1c2)                    0.00      12.31 r
+  data arrival time                                  12.31
+
+  clock clk (rise edge)                   20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  ct03_reg[6]/CLK (fd1c2)                  0.00      20.00 r
+  library setup time                      -0.30      19.70
+  data required time                                 19.70
+  -----------------------------------------------------------
+  data required time                                 19.70
+  data arrival time                                 -12.31
+  -----------------------------------------------------------
+  slack (MET)                                         7.39
+
+
+1

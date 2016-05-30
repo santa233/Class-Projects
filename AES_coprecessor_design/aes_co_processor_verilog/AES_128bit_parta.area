@@ -1,0 +1,47 @@
+ 
+****************************************
+Report : area
+Design : AES_128bit
+Version: I-2013.12
+Date   : Thu May 14 16:30:20 2015
+****************************************
+
+Information: Updating design information... (UID-85)
+Information: Timing loop detected. (OPT-150)
+	U2282/A U2282/Y 
+Information: Timing loop detected. (OPT-150)
+	U4119/A U4119/Y U2258/A U2258/Y U3358/A U3358/Y 
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'U2282'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'U2258'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'A' and 'Y' on cell 'U2265'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'B' and 'Y' on cell 'U2257'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'D0' and 'Y' on cell 'U797'
+         to break a timing loop. (OPT-314)
+Warning: Disabling timing arc between pins 'D1' and 'Y' on cell 'U797'
+         to break a timing loop. (OPT-314)
+Library(s) Used:
+
+    cba_core (File: /software/nonrdist/synopsys-design-compiler-2013.12/libraries/syn/tc6a_cbacore.db)
+
+Number of ports:                          270
+Number of nets:                          3600
+Number of cells:                         3387
+Number of combinational cells:           2613
+Number of sequential cells:               759
+Number of macros/black boxes:              14
+Number of buf/inv:                        592
+Number of references:                      83
+
+Combinational area:               4761.560024
+Buf/Inv area:                      608.320007
+Noncombinational area:            2947.450022
+Macro/Black Box area:               34.160001
+Net Interconnect area:           38219.531250
+
+Total cell area:                  7743.170047
+Total area:                      45962.701297
+1

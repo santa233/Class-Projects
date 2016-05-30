@@ -1,0 +1,24 @@
+
+input A 
+input B 
+input C 
+input D 
+input E 
+input F 
+output S 
+AND U001 A B G 
+AND UOO2 C D I 
+AND U003 E F J  
+OR U004 G I P 
+NOT U005 J M 
+OR U006 G N O 
+NOT U007 B K 
+OR U008 I K L 
+OR U009 O L V 
+AND U010 P M Q 
+NOT U011 V U 
+OR U012 U M T 
+OR U013 R T S  
+NOT U014 D N 
+NOT U015 Q R 
+

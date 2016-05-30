@@ -1,0 +1,14 @@
+input Key 
+input PT 
+input A 
+input B 
+input C 
+output O 
+
+NOT U001 B OP1 
+AND U002 A OP1 OP2 
+AND U003 C OP2 OP3 
+NOT U004 OP3 OP4 
+AND U005 OP4 PT OP5 
+AND U006 OP3 Key OP6 
+OR U007 OP5 OP6 O 
