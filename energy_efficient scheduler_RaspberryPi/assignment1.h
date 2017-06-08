@@ -43,9 +43,14 @@ typedef struct shared_variable {
 	int shock_obj;
 	int reset;
 	int dead;
-	int go;
-	int state;
-	int pb_etime,temp_etime,track_etime,shock_etime,aled_etime,buzzer_etime,rgb_etime,yellow_etime;
+	int go,i,ii,low,high,a[8],ab[8];
+	int state,critical,select[8];
+	int pressed,depressed;
+	float b[8];
+	long long next_deadline[8];
+	long long exetime_high[8],exetime_low[8],prev_time,energy;
+	int prev_alive_tasks[8];
+	long long idle;
 } SharedVariable;
 
 
