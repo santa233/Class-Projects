@@ -30,7 +30,7 @@ void learn_workloads(SharedVariable* sv) {
 	// long long curTime = get_current_time_us();
 	set_by_min_freq();
 	long long metric;
-        long long curTime_before = get_current_time_us();
+        long long curTime_before = get_current_time_us(),max;
         long long curTime_after = get_current_time_us()-curTime_before;
 	int i;
 
