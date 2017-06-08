@@ -12,4 +12,3 @@ void learn_workloads(struct shared_variable* sv);
 TaskSelection select_task(struct shared_variable* sv, const int* aliveTasks, long long idleTime);
 
 #endif
-
