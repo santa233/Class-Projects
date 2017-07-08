@@ -224,4 +224,76 @@ int main()
     	//if(ck == 1)
     	//    break;
     }
+    for(int op_node_no =0 ; op_node_no < op_nodes; op_node_no++)
+    {
+        float sum = 0;
+        for(int pixel_no = 0 ; pixel_no < image_size ; pixel_no++)
+        {
+        	//cout << weights_ARR_in[op_node_no][pixel_no] << endl;
+        }
+    }
+
+    //cout << "FUCK" << endl;
+   vec=read_Mnist(filename3);
+    //cout << "noprob" << endl;
+    //int test_dataset_size = vec.size();
+    vec1=read_Mnist_label(filename4);
+
+    float metric_max=0;
+    float decision=0;
+    int correct = 0;
+    int correct_0 = 0;
+    int incorrect = 0;
+    int incorrect_0 = 0;
+    float acti_arr[op_nodes];
+
+    for(int img_no = 0; img_no <test_dataset_size ; img_no ++)
+    {
+    	for(int op_node_no =0 ; op_node_no < op_nodes; op_node_no++)
+    	{
+    		float sum = 0;
+    	    for(int pixel_no = 0 ; pixel_no < image_size ; pixel_no++)
+    	    {
+    	    	sum = sum + weights_ARR_in[op_node_no][pixel_no]*vec[img_no][pixel_no];
+    	    }
+    	    acti_arr[op_node_no] = sum;
+    	    //cout << "ok" << endl;
+    	}
+        metric_max=0;
+        //for(int pixel_no = 0 ; pixel_no < image_size ; pixel_no++)
+        //{
+        //    input_image[pixel_no] = vec[img_no][pixel_no];
+        //}
+        for(int op_node_no =0 ; op_node_no < op_nodes; op_node_no++)
+        {
+            //for(int pixel_no = 0 ; pixel_no < image_size ; pixel_no++)
+            //{
+            //    weights[pixel_no] = weights_ARR[op_node_no][pixel_no];
+            //}
+            //float g_A = activation_function_result(input_image,weights,activation);
+
+            if(metric_max < acti_arr[op_node_no]*acti_arr[op_node_no]*1000*1000)
+            {
+                metric_max = acti_arr[op_node_no]*acti_arr[op_node_no]*1000*1000;
+                decision = op_node_no;
+            }
+        }
+        cout << decision << endl;
+        if(decision == vec1[img_no])
+        {
+            correct = correct + 1;
+            if(vec1[img_no]==0)
+                correct_0++;
+        }
+        else
+        {
+            incorrect = incorrect + 1;
+            if(vec1[img_no]==0)
+                incorrect_0++;
+        }
+    }
+    cout << "correct " << correct << endl;
+    cout << "incorrect " << incorrect << endl;
+    cout << "error_rate " << ((float)(incorrect))/10000 << endl;
+
 }
