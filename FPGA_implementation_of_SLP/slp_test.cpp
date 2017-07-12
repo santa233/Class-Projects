@@ -224,19 +224,9 @@ int main()
     	//if(ck == 1)
     	//    break;
     }
-    for(int op_node_no =0 ; op_node_no < op_nodes; op_node_no++)
-    {
-        float sum = 0;
-        for(int pixel_no = 0 ; pixel_no < image_size ; pixel_no++)
-        {
-        	//cout << weights_ARR_in[op_node_no][pixel_no] << endl;
-        }
-    }
+    
 
-    //cout << "FUCK" << endl;
-   vec=read_Mnist(filename3);
-    //cout << "noprob" << endl;
-    //int test_dataset_size = vec.size();
+   vec=read_Mnist(filename3);;
     vec1=read_Mnist_label(filename4);
 
     float metric_max=0;
